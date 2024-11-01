@@ -40,16 +40,48 @@ def view_all_songs():
             f.write("\n")
 
 def create_song():
+    print(54 * "=")
+    print("<< CREATE SONG >>")
+    print("Please complete the prompts to create your song.\n")
+
     song_id = str(uuid.uuid4())
     title = input("Enter title of song: ")
     artist = input("Enter name of artist: ")
     genre = input("Enter name of album: ")
     year = input("Enter genre of song: ")
+    print("\n")
 
-    with open(SONGS, "a", newline="") as f:
-        write_data = [song_id, title, artist, genre, year]
-        writer = csv.writer(f)
-        writer.writerow(write_data)
+    print("1. Save song")
+    print("2. Return to Main Menu\n")
+
+    user_input = "0"
+    while user_input != "1" or user_input != "2":
+        user_input = input("Please choose an option (1 - 2): ")
+        print(user_input)
+
+        if user_input == "1":
+            try:
+                with open(SONGS, "a", newline="") as f:
+                    write_data = [song_id, title, artist, genre, year]
+                    writer = csv.writer(f)
+                    writer.writerow(write_data)
+                print("Song created successfully\n")
+                print("1. Create another song")
+                print("2. Return to Main Menu\n")
+
+                user_input = "0"
+                while user_input != "1" or user_input != "2":
+                    user_input = input("Please choose an option (1 - 2): ")
+                    if user_input == "1":
+                        create_song()
+                    if user_input == "2":
+                        main()
+            except:
+                "Error occurred. Returning to Main Menu"
+                main()
+
+        if user_input == "2":
+            main()
 
 def delete_song():
     delete_mode = input("Delete Mode: ")
@@ -82,11 +114,14 @@ def delete_song():
 
             print(f"Successfully deleted album with {delete_mode}: {key}")
 
+def generate_recommendation():
+    pass
+
 def main():
     print(54 * "=")
     print(10 * " " + "*** Welcome to MyMusicManager! ***")
     print(54 * "=")
-    print("<<MAIN MENU>>")
+    print("<< MAIN MENU >>")
     print("Select the action you wish to perform.\n")
     print("1. View All Songs")
     print("2. Create Song")
@@ -101,6 +136,8 @@ def main():
         create_song()
     if user_input == "3":
         delete_song()
+    if user_input == "4":
+        generate_recommendation()
     if user_input == "4":
         print("Features Guide TBD")
     if user_input == "5":
