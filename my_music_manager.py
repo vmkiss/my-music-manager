@@ -123,8 +123,14 @@ def delete_menu():
         print("\n")
 
         if user_input == "1":
+            print(54 * "=")
+            print("<< DELETE SONG BY ID >>")
+            print("Please enter the exact ID of the song you wish to delete.\n")
             delete_song("ID")
         if user_input == "2":
+            print(54 * "=")
+            print("<< DELETE SONG BY TITLE >>")
+            print("Please enter the exact title of the song you wish to delete.\n")
             delete_song("Title")
         if user_input == "3":
             main()
@@ -132,7 +138,7 @@ def delete_menu():
 
 def delete_song(delete_mode):
 
-    key = input(f"Enter Song {delete_mode}: ")
+    key = input(f"Enter song {delete_mode.lower()}: ")
 
     with open(SONGS, "r", newline="") as f:
         song_reader = csv.DictReader(f)
@@ -141,25 +147,52 @@ def delete_song(delete_mode):
     new_songs = [song for song in songs if song[delete_mode] != key]
 
     if len(songs) == len(new_songs):
-        print(f"No album found with {delete_mode}: {key}")
-        return
+        print(f"NO SONG FOUND WITH {delete_mode.upper()}: {key.upper()}\n")
+        print(f"1. Enter new song {delete_mode.lower()}")
+        print("2. Return to Delete Menu")
+        print("3. Return to Main Menu\n")
+
+        user_input = "0"
+        while user_input != "1" or user_input != "2" or user_input != "3":
+            user_input = input("Please choose an option (1 - 3): ")
+
+            if user_input == "1":
+                print("\n")
+                delete_song(delete_mode)
+            if user_input == "2":
+                print("\n")
+                delete_menu()
+            if user_input == "3":
+                print("\n")
+                main()
 
     # Ask if user wants to proceed with deletion
-    print(f"Song with {delete_mode}: {key} found!\n")
-    print("Are you sure you wish to proceed with deletion?")
-    print("Press 1 to proceed.")
-    print("Press 2 to cancel.\n")
+    print(f"SONG WITH {delete_mode.upper()}: {key.upper()} FOUND!\n")
+    print(f"!!! ARE YOU SURE YOU WISH TO PROCEED WITH PERMANENTLY DELETING {key.upper()}? !!!")
+    print("1. Delete song(s).")
+    print("2. Cancel and return to Delete Menu")
+    print("3. Cancel and return to Main Menu\n")
 
-    user_choice = input("Enter your choice (1 - 2): ")
+    user_choice = 0
+    while user_choice != 1 or user_choice != 2 or user_choice != 3:
+        user_choice = input("Please choose an option (1 - 3): ")
 
-    if user_choice == "1":
-        with open(SONGS, "w", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow(HEADERS)
-            for song in new_songs:
-                writer.writerow([song["ID"], song["Title"], song["Artist"], song["Album"], song["Genre"]])
+        if user_choice == "1":
+            with open(SONGS, "w", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(HEADERS)
+                for song in new_songs:
+                    writer.writerow([song["ID"], song["Title"], song["Artist"], song["Album"], song["Genre"]])
 
-            print(f"Successfully deleted song with {delete_mode}: {key}")
+                print(f"Successfully deleted song with {delete_mode.lower()}: {key}")
+
+        if user_choice == "2":
+            print("\n")
+            delete_menu()
+
+        if user_choice == "3":
+            print("\n")
+            main()
 
 def generate_recommendation():
     pass
