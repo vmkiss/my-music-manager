@@ -1,3 +1,9 @@
+ID: 85343311-8d3f-4cdd-8d24-a2686918a0fa
+Title: About a Girl
+Artist: Nirvana
+Album: Bleach
+Genre: Rock
+
 ID: defc788f-5e5b-4151-910a-094d0ea5f5b1
 Title: Death on Two Legs
 Artist: Queen

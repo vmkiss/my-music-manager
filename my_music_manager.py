@@ -25,19 +25,43 @@ if not os.path.exists(SONGS):
 
 def view_all_songs():
     """Read csv file and return all albums in collection"""
-    with open(SONGS, "r", newline="") as f:
-        song_reader = csv.DictReader(f)
-        songs = list(song_reader)
-        songs = sorted(songs, key=lambda x: x['Title'])
+    print(54 * "=")
+    print("<< VIEW ALL SONGS >>")
+    print("Please select an option from the menu below.\n")
+    print("1. Generate a text file of all songs in your collection")
+    print("2. Return to Main Menu\n")
 
-    with open("view_albums.txt", "w") as f:
-        for song in songs:
-            f.write("ID: " + song["ID"] + "\n")
-            f.write("Title: " + song["Title"] + "\n")
-            f.write("Artist: " + song["Artist"] + "\n")
-            f.write("Album: " + song["Album"] + "\n")
-            f.write("Genre: " + song["Genre"] + "\n")
-            f.write("\n")
+    user_input = "0"
+    while user_input != "1" or user_input != "2":
+        user_input = input("Please choose an option (1 - 2): ")
+
+        if user_input == "1":
+            print("Generating text file of songs...")
+            with open(SONGS, "r", newline="") as f:
+                song_reader = csv.DictReader(f)
+                songs = list(song_reader)
+                songs = sorted(songs, key=lambda x: x['Title'])
+
+            with open("view_songs.txt", "w") as f:
+                for song in songs:
+                    f.write("ID: " + song["ID"] + "\n")
+                    f.write("Title: " + song["Title"] + "\n")
+                    f.write("Artist: " + song["Artist"] + "\n")
+                    f.write("Album: " + song["Album"] + "\n")
+                    f.write("Genre: " + song["Genre"] + "\n")
+                    f.write("\n")
+            print("Song list complete! View your songs in view_songs.txt\n")
+
+            user_input = "0"
+            while user_input != "1":
+                user_input = input("Enter 1 to return to Main Menu: ")
+                if user_input == "1":
+                    print("\n")
+                    main()
+
+        if user_input == "2":
+            print("\n")
+            main()
 
 def create_song():
     print(54 * "=")
@@ -57,7 +81,6 @@ def create_song():
     user_input = "0"
     while user_input != "1" or user_input != "2":
         user_input = input("Please choose an option (1 - 2): ")
-        print(user_input)
 
         if user_input == "1":
             try:
@@ -73,17 +96,19 @@ def create_song():
                 while user_input != "1" or user_input != "2":
                     user_input = input("Please choose an option (1 - 2): ")
                     if user_input == "1":
+                        print("\n")
                         create_song()
                     if user_input == "2":
+                        print("\n")
                         main()
             except:
-                "Error occurred. Returning to Main Menu"
+                print("Error occurred. Returning to Main Menu\n")
                 main()
 
         if user_input == "2":
             main()
 
-def delete_song():
+def delete_song(delete_mode, key):
     delete_mode = input("Delete Mode: ")
     key = input("Enter song title/id: ")
 
