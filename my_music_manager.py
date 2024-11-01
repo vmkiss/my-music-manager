@@ -38,7 +38,6 @@ def view_all_songs():
             f.write("Album: " + song["Album"] + "\n")
             f.write("Genre: " + song["Genre"] + "\n")
             f.write("\n")
-    return
 
 def create_song():
     song_id = str(uuid.uuid4())
