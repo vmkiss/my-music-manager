@@ -108,9 +108,31 @@ def create_song():
         if user_input == "2":
             main()
 
-def delete_song(delete_mode, key):
-    delete_mode = input("Delete Mode: ")
-    key = input("Enter song title/id: ")
+def delete_menu():
+    print(54 * "=")
+    print("<< DELETE SONG >>")
+    print("Please select an option from the delete menu.")
+    print("Please note: All song IDs are unique, but more than one song may share the same title.\n")
+    print("1. Delete by ID: deletes a single song with given ID")
+    print("2. Delete by Title: deletes ALL songs with given title")
+    print("3. Return to Main Menu\n")
+
+    user_input = "0"
+    while user_input != "1" or user_input != "2" or user_input != "3":
+        user_input = input("Please choose an option (1 - 3): ")
+        print("\n")
+
+        if user_input == "1":
+            delete_song("ID")
+        if user_input == "2":
+            delete_song("Title")
+        if user_input == "3":
+            main()
+
+
+def delete_song(delete_mode):
+
+    key = input(f"Enter Song {delete_mode}: ")
 
     with open(SONGS, "r", newline="") as f:
         song_reader = csv.DictReader(f)
@@ -123,7 +145,7 @@ def delete_song(delete_mode, key):
         return
 
     # Ask if user wants to proceed with deletion
-    print(f"Album with {delete_mode}: {key} found!\n")
+    print(f"Song with {delete_mode}: {key} found!\n")
     print("Are you sure you wish to proceed with deletion?")
     print("Press 1 to proceed.")
     print("Press 2 to cancel.\n")
@@ -137,7 +159,7 @@ def delete_song(delete_mode, key):
             for song in new_songs:
                 writer.writerow([song["ID"], song["Title"], song["Artist"], song["Album"], song["Genre"]])
 
-            print(f"Successfully deleted album with {delete_mode}: {key}")
+            print(f"Successfully deleted song with {delete_mode}: {key}")
 
 def generate_recommendation():
     pass
@@ -151,16 +173,17 @@ def main():
     print("1. View All Songs")
     print("2. Create Song")
     print("3. Delete Song")
-    print("4. View MyMusicManager Features Guide")
-    print("4. Exit\n")
+    print("4. Recommend Song")
+    print("5. View MyMusicManager Features Guide")
+    print("6. Exit\n")
 
-    user_input = input("Please choose an option (1 - 5): ")
+    user_input = input("Please choose an option (1 - 6): ")
     if user_input == "1":
         view_all_songs()
     if user_input == "2":
         create_song()
     if user_input == "3":
-        delete_song()
+        delete_menu()
     if user_input == "4":
         generate_recommendation()
     if user_input == "4":
