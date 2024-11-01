@@ -51,7 +51,10 @@ def create_song():
         writer = csv.writer(f)
         writer.writerow(write_data)
 
-def delete_song(delete_mode, key):
+def delete_song():
+    delete_mode = input("Delete Mode: ")
+    key = input("Enter song title/id: ")
+
     with open(SONGS, "r", newline="") as f:
         song_reader = csv.DictReader(f)
         songs = list(song_reader)
@@ -78,11 +81,36 @@ def delete_song(delete_mode, key):
                 writer.writerow([song["ID"], song["Title"], song["Artist"], song["Album"], song["Genre"]])
 
             print(f"Successfully deleted album with {delete_mode}: {key}")
-    else:
+
+def main():
+    print(54 * "=")
+    print(10 * " " + "*** Welcome to MyMusicManager! ***")
+    print(54 * "=")
+    print("<<MAIN MENU>>")
+    print("Select the action you wish to perform.\n")
+    print("1. View All Songs")
+    print("2. Create Song")
+    print("3. Delete Song")
+    print("4. View MyMusicManager Features Guide")
+    print("4. Exit\n")
+
+    user_input = input("Please choose an option (1 - 5): ")
+    if user_input == "1":
+        view_all_songs()
+    if user_input == "2":
+        create_song()
+    if user_input == "3":
+        delete_song()
+    if user_input == "4":
+        print("Features Guide TBD")
+    if user_input == "5":
         return
 
 
+
+
+
 if __name__ == "__main__":
-    view_all_songs()
+    main()
 
 
