@@ -12,6 +12,8 @@ ID3 = str(uuid.uuid4())
 DATA3 = [ID3, "Lover, You Should've Come Over", "Jeff Buckley", "Grace", "Rock"]
 ID4 = str(uuid.uuid4())
 DATA4 = [ID4, "You Oughta Know", "Alanis Morissette", "Jagged Little Pill", "Rock"]
+ID5 = str(uuid.uuid4())
+DATA5 = [ID5, "This Customer ('s Coming Again)", "Alisdair Lee", "Old Dog, New Tricks", "Rock"]
 SONGS = "songs.csv"
 
 if not os.path.exists(SONGS):
@@ -22,12 +24,13 @@ if not os.path.exists(SONGS):
         writer.writerow(DATA2)
         writer.writerow(DATA3)
         writer.writerow(DATA4)
+        writer.writerow(DATA5)
 
 def view_all_songs():
     """Read csv file and return all albums in collection"""
     print(54 * "=")
     print("<< VIEW ALL SONGS >>")
-    print("Please select an option from the menu below.\n")
+    print("Please select an option from the menu.\n")
     print("1. Generate a text file of all songs in your collection")
     print("2. Return to Main Menu\n")
 
@@ -111,7 +114,7 @@ def create_song():
 def delete_menu():
     print(54 * "=")
     print("<< DELETE SONG >>")
-    print("Please select an option from the delete menu.")
+    print("Please select an option from the menu.")
     print("Please note: All song IDs are unique, but more than one song may share the same title.\n")
     print("1. Delete by ID: deletes a single song with given ID")
     print("2. Delete by Title: deletes ALL songs with given title")
@@ -196,8 +199,28 @@ def delete_song(delete_mode):
 
 
 def recommend_menu():
-    pass
-def generate_song():
+    print(54 * "=")
+    print("<< RECOMMEND SONG >>")
+    print("Please select an option from the menu.\n")
+    print("1. Recommend Song: get random song chosen from entire music collection")
+    print("2. Recommend Song by Artist: get random song chosen from specified artist's songs")
+    print("3. Recommend Song by Album: get random song chosen from specified album")
+    print("4. Return to Main Menu\n")
+
+    user_choice = "0"
+    while user_choice != "1" or user_choice != "2" or user_choice != "3" or user_choice != "4":
+        user_choice = input("Please choose an option (1 - 4): ")
+
+        if user_choice == "1":
+            recommend_song()
+        if user_choice == "2":
+            recommend_song()
+        if user_choice == "3":
+            recommend_song()
+        if user_choice == "4":
+            main()
+
+def recommend_song():
     pass
 
 def features_guide():
