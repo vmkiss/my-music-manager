@@ -242,7 +242,7 @@ def load_songs():
         song_reader = csv.DictReader(f)
         song_data = []
         for song in song_reader:
-            song_data.append(f"{song['ID']},{song['Title']},{song['Artist']},{song['Album']},{song['Genre']}")
+            song_data.append(f"{song['ID']}*{song['Title']}*{song['Artist']}*{song['Album']}*{song['Genre']}")
         return "\n".join(song_data)
 
 
@@ -302,7 +302,6 @@ def main():
                 exit()
 
 if __name__ == "__main__":
-    print(load_songs())
-    #main()
+    main()
 
 
