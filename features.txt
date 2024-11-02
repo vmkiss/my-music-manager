@@ -14,16 +14,14 @@ alphabetically according to title. ***
         *** DELETE SONG BY TITLE: All songs with the title specified by
         the user will be deleted from the collection.
 
- *** RECOMMEND SONG: Users can get a song recommendation from their
+ *** RECOMMEND MUSIC: Users can get music recommendations from their
  collection. There are three options:
 
         *** RANDOM SONG: User will receive a random song recommendation
-        chosen from all songs in the collection.
+        from the songs in their collection.
 
-        *** RANDOM SONG BY ARTIST: User will provide the name of an artist
-        and will receive a random song recommendation chosen from all songs
-        by that artist
+        *** RANDOM ARTIST: User will receive a random artist recommendation
+        from the artists in their collection.
 
-        *** RANDOM SONG BY ALBUM: User will provide the name of an album and
-        will receive a random song recommendation chosen from the specified
-        album
+        *** RANDOM ALBUM: User will receive a random album recommendation from
+        the albums in their collection.

@@ -202,28 +202,70 @@ def delete_song(delete_mode):
 
 def recommend_menu():
     print(54 * "=")
-    print("<< RECOMMEND SONG >>")
+    print("<< RECOMMEND MUSIC >>")
     print("Please select an option from the menu.\n")
-    print("1. Recommend Song: get random song chosen from entire music collection")
-    print("2. Recommend Song by Artist: get random song chosen from specified artist's songs")
-    print("3. Recommend Song by Album: get random song chosen from specified album")
+    print("1. Recommend Song: get random song recommendation from songs in collection")
+    print("2. Recommend Artist: get random artist recommendation from artists in collection")
+    print("3. Recommend Song by Album: get random album recommendation from albums in collection")
     print("4. Return to Main Menu\n")
 
     user_choice = "0"
     while user_choice != "1" or user_choice != "2" or user_choice != "3" or user_choice != "4":
         user_choice = input("Please choose an option (1 - 4): ")
+        if user_choice == "1":
+            print("\n")
+            recommend_song_menu()
+        if user_choice == "2":
+            print("\n")
+            recommend_artist_menu()
+        if user_choice == "3":
+            print("\n")
+            recommend_album_menu()
+        if user_choice == "4":
+            print("\n")
+            main()
 
+def recommend_song_menu():
+    print(54 * "=")
+    print("<< RECOMMEND SONG (ALL) >>")
+    print("Please select an option from the menu.\n")
+    print("1. Generate random song from selection of all songs in collection.")
+    print("2. Return to Recommend Song Menu")
+    print("3. Return to Main Menu\n")
+
+    user_choice = "0"
+    while user_choice != "1" or user_choice != "2" or user_choice != "3":
+        user_choice = input("Please choose an option (1 - 3): ")
         if user_choice == "1":
             song_data = load_songs()
+            print("\n")
             recommend_song(song_data)
-        if user_choice == "2":
-            artist_data = load_artists()
-            recommend_song(artist_data)
-        if user_choice == "3":
-            album_data = load_albums()
-            recommend_song(album_data)
-        if user_choice == "4":
-            main()
+            print("\n")
+
+            print("1. Generate another song")
+            print("2. Return to Recommend Music Menu")
+            print("3. Return to Main Menu")
+
+            user_choice = 0
+            while user_choice != "1" or user_choice != "2" or user_choice != "3":
+                user_choice = input("Please choose an option (1 - 3: ")
+                if user_choice == "1":
+                    print("\n")
+                    recommend_song_menu()
+                if user_choice == "2":
+                    print("\n")
+                    recommend_menu()
+                if user_choice == "3":
+                    print("\n")
+                    main()
+
+def recommend_artist_menu():
+    pass
+
+
+def recommend_album_menu():
+    pass
+
 
 def recommend_song(data):
     context = zmq.Context()
@@ -235,7 +277,7 @@ def recommend_song(data):
 
     # Wait for response from microservice
     rec = socket.recv_string()
-    print(rec)
+    print(f"YOUR RANDOM SONG RECOMMENDATION IS:\n{rec}")
 
 def load_songs():
     with open(SONGS, 'r') as f:
@@ -280,7 +322,7 @@ def main():
         print("1. View All Songs")
         print("2. Create Song")
         print("3. Delete Song")
-        print("4. Recommend Song")
+        print("4. Recommend Music")
         print("5. View MyMusicManager Features Guide")
         print("6. Exit\n")
 
