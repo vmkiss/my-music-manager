@@ -194,39 +194,59 @@ def delete_song(delete_mode):
             print("\n")
             main()
 
-def generate_recommendation():
+
+def recommend_menu():
+    pass
+def generate_song():
     pass
 
+def features_guide():
+    print(54 * "=")
+    print("<< FEATURES GUIDE >>")
+    print("Need help understanding MyMusicManager's features?\nAll the information you need is below\n")
+
+    with open("features.txt", "r") as f:
+        for line in f:
+            print(line.rstrip())
+
+    print("\n")
+    user_input = "0"
+    while user_input != "1":
+        user_input = input("Enter 1 to return to Main Menu: ")
+        if user_input == "1":
+            print("\n")
+            main()
+
 def main():
-    print(54 * "=")
-    print(10 * " " + "*** Welcome to MyMusicManager! ***")
-    print(54 * "=")
-    print("<< MAIN MENU >>")
-    print("Select the action you wish to perform.\n")
-    print("1. View All Songs")
-    print("2. Create Song")
-    print("3. Delete Song")
-    print("4. Recommend Song")
-    print("5. View MyMusicManager Features Guide")
-    print("6. Exit\n")
+    while True:
+        print(54 * "=")
+        print(10 * " " + "*** Welcome to MyMusicManager! ***")
+        print(54 * "=")
+        print("<< MAIN MENU >>")
+        print("Select the action you wish to perform.\n")
+        print("1. View All Songs")
+        print("2. Create Song")
+        print("3. Delete Song")
+        print("4. Recommend Song")
+        print("5. View MyMusicManager Features Guide")
+        print("6. Exit\n")
 
-    user_input = input("Please choose an option (1 - 6): ")
-    if user_input == "1":
-        view_all_songs()
-    if user_input == "2":
-        create_song()
-    if user_input == "3":
-        delete_menu()
-    if user_input == "4":
-        generate_recommendation()
-    if user_input == "4":
-        print("Features Guide TBD")
-    if user_input == "5":
-        return
-
-
-
-
+        user_input = 0
+        while user_input != "1" or user_input != "2" or user_input != "3" or user_input != "4" or user_input != "5" or user_input != "6":
+            user_input = input("Please choose an option (1 - 6): ")
+            if user_input == "1":
+                view_all_songs()
+            if user_input == "2":
+                create_song()
+            if user_input == "3":
+                delete_menu()
+            if user_input == "4":
+                recommend_menu()
+            if user_input == "5":
+                features_guide()
+            if user_input == "6":
+                print("Thank you for using MyMusicManager. Goodbye!")
+                exit()
 
 if __name__ == "__main__":
     main()

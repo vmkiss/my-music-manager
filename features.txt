@@ -1,0 +1,29 @@
+*** VIEW ALL SONGS: Displays all songs in the music collection in a
+text file called view_songs.txt. Song information is printed
+alphabetically according to title. ***
+
+ *** CREATE SONG: Users can add a new song to their collection by
+ entering the title, artist, album, and genre of the song as prompted. ***
+
+ *** DELETE SONG: Users can delete a song from their collection. There
+ are two options:
+
+        *** DELETE SONG BY ID: A single song with the unique ID specified
+        by the user will be deleted from the collection.
+
+        *** DELETE SONG BY TITLE: All songs with the title specified by
+        the user will be deleted from the collection.
+
+ *** RECOMMEND SONG: Users can get a song recommendation from their
+ collection. There are three options:
+
+        *** RANDOM SONG: User will receive a random song recommendation
+        chosen from all songs in the collection.
+
+        *** RANDOM SONG BY ARTIST: User will provide the name of an artist
+        and will receive a random song recommendation chosen from all songs
+        by that artist
+
+        *** RANDOM SONG BY ALBUM: User will provide the name of an album and
+        will receive a random song recommendation chosen from the specified
+        album
