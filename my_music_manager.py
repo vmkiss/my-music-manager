@@ -1,6 +1,8 @@
 import csv
 import os
 import uuid
+import zmq
+
 
 # Create CSV file if it doesn't exist yet
 HEADERS = ["ID", "Title", "Artist", "Album", "Genre"]
@@ -212,15 +214,43 @@ def recommend_menu():
         user_choice = input("Please choose an option (1 - 4): ")
 
         if user_choice == "1":
-            recommend_song()
+            song_data = load_songs()
+            recommend_song(song_data)
         if user_choice == "2":
-            recommend_song()
+            artist_data = load_artists()
+            recommend_song(artist_data)
         if user_choice == "3":
-            recommend_song()
+            album_data = load_albums()
+            recommend_song(album_data)
         if user_choice == "4":
             main()
 
-def recommend_song():
+def recommend_song(data):
+    context = zmq.Context()
+    socket = context.socket(zmq.REQ) # Request socket
+    socket.connect("tcp://localhost:5555") # Establish connection
+
+    # Send song data to recommendation microservice
+    socket.send_string(data)
+
+    # Wait for response from microservice
+    rec = socket.recv_string()
+    print(rec)
+
+def load_songs():
+    with open(SONGS, 'r') as f:
+        song_reader = csv.DictReader(f)
+        song_data = []
+        for song in song_reader:
+            song_data.append(f"{song['ID']},{song['Title']},{song['Artist']},{song['Album']},{song['Genre']}")
+        return "\n".join(song_data)
+
+
+
+def load_artists():
+    pass
+
+def load_albums():
     pass
 
 def features_guide():
@@ -272,6 +302,7 @@ def main():
                 exit()
 
 if __name__ == "__main__":
-    main()
+    print(load_songs())
+    #main()
 
 
