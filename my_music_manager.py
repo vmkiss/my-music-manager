@@ -16,6 +16,8 @@ ID4 = str(uuid.uuid4())
 DATA4 = [ID4, "You Oughta Know", "Alanis Morissette", "Jagged Little Pill", "Rock"]
 ID5 = str(uuid.uuid4())
 DATA5 = [ID5, "This Customer ('s Coming Again)", "Alisdair Lee", "Old Dog, New Tricks", "Rock"]
+ID6 = str(uuid.uuid4())
+DATA6 = [ID6, "Pink Pony Club", "Chappell Roan", "Rise and Fall of a Midwest Princess", "Pop"]
 SONGS = "songs.csv"
 
 if not os.path.exists(SONGS):
@@ -27,6 +29,7 @@ if not os.path.exists(SONGS):
         writer.writerow(DATA3)
         writer.writerow(DATA4)
         writer.writerow(DATA5)
+        writer.writerow(DATA6)
 
 def view_all_songs():
     """Read csv file and return all albums in collection"""
@@ -292,8 +295,9 @@ def load_artists():
         song_reader = csv.DictReader(f)
         artist_data = []
         for song in song_reader:
-            artist_data.append(f"{song['Artist']}")
-        return "*".join(artist_data)
+            if song['Artist'] not in artist_data:
+                artist_data.append(f"{song['Artist']}")
+        print("*".join(artist_data))
 
 def load_albums():
     pass
