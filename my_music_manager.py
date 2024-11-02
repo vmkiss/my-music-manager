@@ -287,10 +287,13 @@ def load_songs():
             song_data.append(f"{song['ID']}*{song['Title']}*{song['Artist']}*{song['Album']}*{song['Genre']}")
         return "\n".join(song_data)
 
-
-
 def load_artists():
-    pass
+    with open(SONGS, 'r') as f:
+        song_reader = csv.DictReader(f)
+        artist_data = []
+        for song in song_reader:
+            artist_data.append(f"{song['Artist']}")
+        return "*".join(artist_data)
 
 def load_albums():
     pass
