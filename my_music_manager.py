@@ -138,6 +138,7 @@ def delete_song(delete_mode):
         songs = list(song_reader)
 
     new_songs = [song for song in songs if song[delete_mode] != key]
+    print(new_songs)
 
     if len(songs) == len(new_songs):
         print(f"NO SONG FOUND WITH {delete_mode.upper()}: {key.upper()}\n")
@@ -176,8 +177,20 @@ def delete_song(delete_mode):
                 writer.writerow(HEADERS)
                 for song in new_songs:
                     writer.writerow([song["ID"], song["Title"], song["Artist"], song["Album"], song["Genre"]])
+                f.flush()
 
-                print(f"Successfully deleted song with {delete_mode.lower()}: {key}")
+                print(f"Successfully deleted song with {delete_mode.lower()}: {key}\n")
+                print("1. Return to Delete Menu")
+                print("2. Return to Main Menu\n")
+
+                user_choice = "0"
+                while user_choice != 1 or user_choice != 2:
+                    user_choice = input("Please choose an option (1 - 2): ")
+
+                    if user_choice == "1":
+                        delete_menu()
+                    if user_choice == "2":
+                        main()
 
         if user_choice == "2":
             print("\n")
