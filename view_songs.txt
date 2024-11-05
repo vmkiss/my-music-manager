@@ -1,30 +1,600 @@
-ID: 2d02aac6-baac-47c8-bf9e-eded38febfa2
+ID: cded52de-32c8-4c7b-ae40-dc255a5bdeab
+Title: '39
+Artist: Queen
+Album: A Night at the Opera
+Genre: Rock
+
+ID: c83a531b-f6d1-479a-bd43-0ad19b7d501b
+Title: A Change Is Gonna Come
+Artist: Sam Cooke
+Album: Ain't That Good News
+Genre: Soul
+
+ID: 3e290fff-adfa-406a-8308-197e7608d1ca
+Title: After All
+Artist: David Bowie
+Album: The Man Who Sold the World
+Genre: Glam Rock
+
+ID: 0746ce12-c447-4270-b72f-b22144d55f13
+Title: All the Madmen
+Artist: David Bowie
+Album: The Man Who Sold the World
+Genre: Glam Rock
+
+ID: d1ed3db2-c46b-42ee-94b7-87cf364bb076
+Title: All-American Bitch
+Artist: Olivia Rodrigo
+Album: Guts
+Genre: Pop Rock
+
+ID: 3c12d7f9-9daf-45d9-a521-6262b5af15d6
+Title: Another Saturday Night
+Artist: Sam Cooke
+Album: Ain't That Good News
+Genre: Soul
+
+ID: 59fbffdd-e83d-4763-a732-d8e259b0e600
+Title: Baby Britain
+Artist: Elliott Smith
+Album: XO
+Genre: Indie Rock
+
+ID: fa382423-e471-4d07-9c6b-6fa09cd878ef
+Title: Baby Can I Hold You
+Artist: Tracy Chapman
+Album: Tracy Chapman
+Genre: Folk Rock
+
+ID: 4b5dc7b5-8918-4fa4-8588-06ea25eb8232
+Title: Back to Black
+Artist: Amy Winehouse
+Album: Back to Black
+Genre: Soul
+
+ID: 8b711ace-27dd-46ee-bd08-c6e58d052387
+Title: Ballad of a Homeschooled Girl
+Artist: Olivia Rodrigo
+Album: Guts
+Genre: Pop Rock
+
+ID: f2f1413a-602a-4679-b000-e41aa3a89da5
+Title: Bigmouth Strikes Again
+Artist: The Smiths
+Album: The Queen is Dead
+Genre: Alternative Rock
+
+ID: 3e529136-6564-4dbd-aa85-4c7da7aa2f25
+Title: Black Country Rock
+Artist: David Bowie
+Album: The Man Who Sold the World
+Genre: Glam Rock
+
+ID: e59452e5-8c16-4808-bbbc-831e7b1b0c40
+Title: Bohemian Rhapsody
+Artist: Queen
+Album: A Night at the Opera
+Genre: Rock
+
+ID: ae25fb60-c922-4581-b562-3d7acb91fbe3
+Title: Carmen
+Artist: Stromae
+Album: Racine Carrée
+Genre: Electronic
+
+ID: d7d96a5b-0cc9-42bc-abb1-9574c69d1ab0
+Title: Casual
+Artist: Chappell Roan
+Album: Rise and Fall of a Midwest Princess
+Genre: Pop
+
+ID: 26dd4749-fcae-4b35-b92d-dc74032b2117
+Title: Cemetry Gates
+Artist: The Smiths
+Album: The Queen is Dead
+Genre: Alternative Rock
+
+ID: 4a775fe6-e969-43e4-8ed5-3cdf78448304
+Title: Come as You Are
+Artist: Nirvana
+Album: Nevermind
+Genre: Grunge
+
+ID: c961b8b1-929a-4cbd-b4c5-8a678ea94351
+Title: Complicated
+Artist: Avril Lavigne
+Album: Let Go
+Genre: Pop Rock
+
+ID: 176feaf7-5cce-4a6b-8d32-79563f4507e1
+Title: Cosmic Love
+Artist: Florence and the Machine
+Album: Lungs
+Genre: Indie Rock
+
+ID: db158cca-2132-4f34-9515-541d08a92eb0
+Title: Criminal
+Artist: Fiona Apple
+Album: Tidal
+Genre: Alternative Rock
+
+ID: f89518b0-3605-4524-b7b5-641e968408f0
+Title: Dear Lie
+Artist: TLC
+Album: FanMail
+Genre: R&B
+
+ID: 572d56e5-42ea-45fc-8e4d-b340e3fa5437
 Title: Death on Two Legs
 Artist: Queen
 Album: A Night at the Opera
 Genre: Rock
 
-ID: 554b9b45-38f7-460c-91e4-92122b41b1f6
-Title: Lover, You Should've Come Over
+ID: 15889c7c-4695-49dc-b538-cd2b94a08a5a
+Title: Dog Days Are Over
+Artist: Florence and the Machine
+Album: Lungs
+Genre: Indie Rock
+
+ID: 676465e5-8d08-45f0-957b-607965ec72fc
+Title: Drumming Song
+Artist: Florence and the Machine
+Album: Lungs
+Genre: Indie Rock
+
+ID: 6fc8e1f2-9155-4921-bda3-3250401adb19
+Title: Fast Car
+Artist: Tracy Chapman
+Album: Tracy Chapman
+Genre: Folk Rock
+
+ID: bcef97cc-2c2b-4904-b457-a24132d875c5
+Title: For My Lover
+Artist: Tracy Chapman
+Album: Tracy Chapman
+Genre: Folk Rock
+
+ID: e67c6422-cc8b-468d-8466-fc8d2824b8da
+Title: Formidable
+Artist: Stromae
+Album: Racine Carrée
+Genre: Electronic
+
+ID: 2d2bcd57-660b-4669-a02d-1988d198a459
+Title: Frankly, Mr. Shankly
+Artist: The Smiths
+Album: The Queen is Dead
+Genre: Alternative Rock
+
+ID: d2ab3c71-4299-4c4c-a81c-19145129163f
+Title: Good Times
+Artist: Sam Cooke
+Album: Ain't That Good News
+Genre: Soul
+
+ID: d63d4e4f-1814-4361-9d36-66877dc5b0a2
+Title: Grace
 Artist: Jeff Buckley
 Album: Grace
+Genre: Alternative Rock
+
+ID: 307a005e-d077-4374-819d-3c9f1812873b
+Title: Hand in My Pocket
+Artist: Alanis Morissette
+Album: Jagged Little Pill
+Genre: Alternative Rock
+
+ID: 81776a14-72b7-49b5-90e5-3172069b81c3
+Title: Head over Feet
+Artist: Alanis Morissette
+Album: Jagged Little Pill
+Genre: Alternative Rock
+
+ID: 3126ee93-b2c3-48f0-86d7-41e923f069d1
+Title: Hymne à l'amour
+Artist: Édith Piaf
+Album: La Vie en Rose
+Genre: Chanson
+
+ID: 11114631-cc02-4844-9b00-01566c3370d8
+Title: I Don't Wanna Cry
+Artist: Mariah Carey
+Album: Mariah Carey
+Genre: Pop
+
+ID: 019b5318-6d48-4a2f-810a-fcca2cbb86f7
+Title: I Know It's Over
+Artist: The Smiths
+Album: The Queen is Dead
+Genre: Alternative Rock
+
+ID: ab505cbc-4635-48f8-99a9-b21d6752d82d
+Title: I'm Good at Being Bad
+Artist: TLC
+Album: FanMail
+Genre: R&B
+
+ID: 2d842053-c783-4d6d-aab1-236d417743db
+Title: I'm with You
+Artist: Avril Lavigne
+Album: Let Go
+Genre: Pop Rock
+
+ID: bc04ff14-b8ea-43bd-989c-7b4f64054c81
+Title: In Bloom
+Artist: Nirvana
+Album: Nevermind
+Genre: Grunge
+
+ID: 934a262b-d6d9-4368-bac6-72d10dfc0f31
+Title: Independence Day
+Artist: Elliott Smith
+Album: XO
+Genre: Indie Rock
+
+ID: 650fd093-881f-4f01-b2f7-c195646e6716
+Title: Ironic
+Artist: Alanis Morissette
+Album: Jagged Little Pill
+Genre: Alternative Rock
+
+ID: 1bd2dedc-7154-41e4-a425-68ec4362616b
+Title: Kiss with a Fist
+Artist: Florence and the Machine
+Album: Lungs
+Genre: Indie Rock
+
+ID: 4e2d99d2-86b6-43fb-98a7-df481cd17628
+Title: La Vie en Rose
+Artist: Édith Piaf
+Album: La Vie en Rose
+Genre: Chanson
+
+ID: 5f8b309b-8b7a-4b3e-a529-974b0df2ee29
+Title: Lacy
+Artist: Olivia Rodrigo
+Album: Guts
+Genre: Pop Rock
+
+ID: 1b563e91-9fd4-4f97-9a8a-dc4ad7fb2b36
+Title: Last Goodbye
+Artist: Jeff Buckley
+Album: Grace
+Genre: Alternative Rock
+
+ID: d221e1b3-2a52-41db-8084-a9337e672e93
+Title: Lilac Wine
+Artist: Jeff Buckley
+Album: Grace
+Genre: Alternative Rock
+
+ID: 4cff3206-e454-48e0-a372-c2d79401172a
+Title: Lithium
+Artist: Nirvana
+Album: Nevermind
+Genre: Grunge
+
+ID: 111f283f-7b2f-460d-b57e-6244a203b1a2
+Title: Losing Grip
+Artist: Avril Lavigne
+Album: Let Go
+Genre: Pop Rock
+
+ID: 4e342c47-dc87-4100-99a1-928211780081
+Title: Love Is a Losing Game
+Artist: Amy Winehouse
+Album: Back to Black
+Genre: Soul
+
+ID: f3a7f4ef-6d01-42a4-81ea-401b09810d90
+Title: Love Takes Time
+Artist: Mariah Carey
+Album: Mariah Carey
+Genre: Pop
+
+ID: baab130e-b7cf-43cd-b5b3-0981bc5158b8
+Title: Love of My Life
+Artist: Queen
+Album: A Night at the Opera
 Genre: Rock
 
-ID: 5363d41d-d13f-44a1-b812-dbfc07427e55
+ID: 56e56ac6-c8da-46b2-966b-18701a2788b8
+Title: Making the Bed
+Artist: Olivia Rodrigo
+Album: Guts
+Genre: Pop Rock
+
+ID: 2dc21ee0-0e0e-48a9-9de9-3714ccce94a6
+Title: Milord
+Artist: Édith Piaf
+Album: La Vie en Rose
+Genre: Chanson
+
+ID: 007fa3ce-45dc-42ba-871f-d01e1eb7142f
+Title: Mobile
+Artist: Avril Lavigne
+Album: Let Go
+Genre: Pop Rock
+
+ID: d6b6e24b-fdef-4011-82b4-3e9a9f6e9d3d
+Title: Mojo Pin
+Artist: Jeff Buckley
+Album: Grace
+Genre: Alternative Rock
+
+ID: 0c2f68ad-2deb-4a79-b9ba-876206bef511
+Title: Mountains o' Things
+Artist: Tracy Chapman
+Album: Tracy Chapman
+Genre: Folk Rock
+
+ID: 58341c43-2ded-44f9-b681-2ec11691c95c
+Title: Moving
+Artist: Kate Bush
+Album: The Kick Inside
+Genre: Art Rock
+
+ID: c64a5c8c-f7ff-4e16-a402-ec4589f435eb
+Title: Naked in Manhattan
+Artist: Chappell Roan
+Album: Rise and Fall of a Midwest Princess
+Genre: Pop
+
+ID: 0ebd672f-88be-47eb-8fff-d1086fdcc6df
+Title: Never Is a Promise
+Artist: Fiona Apple
+Album: Tidal
+Genre: Alternative Rock
+
+ID: 84b6d4b0-b97b-49f0-99ed-fb7ff120756f
+Title: No Scrubs
+Artist: TLC
+Album: FanMail
+Genre: R&B
+
+ID: 5bea2773-7ff4-46d0-b46c-3af193650234
+Title: Non, je ne regrette rien
+Artist: Édith Piaf
+Album: La Vie en Rose
+Genre: Chanson
+
+ID: 3cce2db8-78d9-4c52-937d-1743a03da8ee
+Title: Padam... Padam...
+Artist: Édith Piaf
+Album: La Vie en Rose
+Genre: Chanson
+
+ID: eea52482-d998-4a9f-aa58-0646cbdb997c
+Title: Papaoutai
+Artist: Stromae
+Album: Racine Carrée
+Genre: Electronic
+
+ID: 6c5da40c-d60e-4bbd-a149-0a42dac861fd
+Title: Pink Pony Club
+Artist: Chappell Roan
+Album: Rise and Fall of a Midwest Princess
+Genre: Pop
+
+ID: 513043ba-4497-48cb-9d22-e6dec2b93036
+Title: Pitseleh
+Artist: Elliott Smith
+Album: XO
+Genre: Indie Rock
+
+ID: 1b3f3e4f-adde-4c8c-a8db-f26d49d22cb9
+Title: Polly
+Artist: Nirvana
+Album: Nevermind
+Genre: Grunge
+
+ID: e6891d41-0afd-4f8f-801e-87fa05625728
+Title: Rabbit Heart (Raise It Up)
+Artist: Florence and the Machine
+Album: Lungs
+Genre: Indie Rock
+
+ID: 728b36c0-6970-4337-987b-d1bd4388b6e4
 Title: Red Wine Supernova
 Artist: Chappell Roan
 Album: Rise and Fall of a Midwest Princess
 Genre: Pop
 
-ID: 1d6a6040-9993-47f5-9bca-871facd33967
-Title: This Customer ('s Coming Again)
-Artist: Alisdair Lee
-Album: Old Dog, New Tricks
-Genre: Rock
+ID: 5a3c659c-5d16-45a1-af56-4cdf4deabd05
+Title: Rehab
+Artist: Amy Winehouse
+Album: Back to Black
+Genre: Soul
 
-ID: 0bd0d669-bd52-4098-bf34-6504524ddefc
+ID: 271320a6-6267-4c33-91e5-ea9a466b0d71
+Title: Running Gun Blues
+Artist: David Bowie
+Album: The Man Who Sold the World
+Genre: Glam Rock
+
+ID: 14b32b30-5b08-4148-b906-ff9ce63f276b
+Title: Shadowboxer
+Artist: Fiona Apple
+Album: Tidal
+Genre: Alternative Rock
+
+ID: 8bbee5f2-9ec2-44fa-b5d3-38d9e592d8e8
+Title: Silly Ho
+Artist: TLC
+Album: FanMail
+Genre: R&B
+
+ID: 019cb04e-3e9d-467e-9f3f-12eac1eb8623
+Title: Sk8er Boi
+Artist: Avril Lavigne
+Album: Let Go
+Genre: Pop Rock
+
+ID: 65107e1c-f7b9-4b28-b59b-ba5a42a2dc5d
+Title: Sleep to Dream
+Artist: Fiona Apple
+Album: Tidal
+Genre: Alternative Rock
+
+ID: 2742dd21-557a-40cb-b86e-8b7a6ee12ef0
+Title: Slow Like Honey
+Artist: Fiona Apple
+Album: Tidal
+Genre: Alternative Rock
+
+ID: 67d1354a-eb25-4f81-98ab-0112fb6ed10a
+Title: Smells Like Teen Spirit
+Artist: Nirvana
+Album: Nevermind
+Genre: Grunge
+
+ID: 510591a7-50ce-46c6-90f0-cede19676dbb
+Title: So Real
+Artist: Jeff Buckley
+Album: Grace
+Genre: Alternative Rock
+
+ID: 5e0cf133-2b36-4379-a44a-dc1b748a51a0
+Title: Someday
+Artist: Mariah Carey
+Album: Mariah Carey
+Genre: Pop
+
+ID: 917e1cd5-5e7f-45ca-a03d-4929504b815b
+Title: Strange Phenomena
+Artist: Kate Bush
+Album: The Kick Inside
+Genre: Art Rock
+
+ID: 21070f43-97bb-4d8f-9363-27fca57bd09e
+Title: Super Graphic Ultra Modern Girl
+Artist: Chappell Roan
+Album: Rise and Fall of a Midwest Princess
+Genre: Pop
+
+ID: db89cb0b-954b-445d-bd19-2049ac4f84c2
+Title: Sweet Adeline
+Artist: Elliott Smith
+Album: XO
+Genre: Indie Rock
+
+ID: 28a7caa9-db45-4a65-a809-2e5831c760c4
+Title: Ta fête
+Artist: Stromae
+Album: Racine Carrée
+Genre: Electronic
+
+ID: e34408ac-008b-491e-bc74-d7458e7d8508
+Title: Talkin' 'bout a Revolution
+Artist: Tracy Chapman
+Album: Tracy Chapman
+Genre: Folk Rock
+
+ID: 98b8b4b3-281c-400c-84c5-dedd191836f0
+Title: Tears Dry on Their Own
+Artist: Amy Winehouse
+Album: Back to Black
+Genre: Soul
+
+ID: 95993a58-bad0-4a28-8a21-b73a55911e17
+Title: Tennessee Waltz
+Artist: Sam Cooke
+Album: Ain't That Good News
+Genre: Soul
+
+ID: e66f2290-f3e9-4c6b-b938-bd729b9c1624
+Title: The Man with the Child in His Eyes
+Artist: Kate Bush
+Album: The Kick Inside
+Genre: Art Rock
+
+ID: 620e5c40-c926-4f0d-9c9c-791476e1d7a2
+Title: The Queen is Dead
+Artist: The Smiths
+Album: The Queen is Dead
+Genre: Alternative Rock
+
+ID: 20808650-b76c-4fc2-81ed-206a16927224
+Title: The Width of a Circle
+Artist: David Bowie
+Album: The Man Who Sold the World
+Genre: Glam Rock
+
+ID: ae86fdbc-f3fa-4405-909b-96292c3198c1
+Title: Them Heavy People
+Artist: Kate Bush
+Album: The Kick Inside
+Genre: Art Rock
+
+ID: 2a0f70de-c396-449b-b47f-59ab75531b05
+Title: There'll Be No Second Time
+Artist: Sam Cooke
+Album: Ain't That Good News
+Genre: Soul
+
+ID: 3749fe98-2d73-41b2-8c76-01277e2e2f8c
+Title: Tous les mêmes
+Artist: Stromae
+Album: Racine Carrée
+Genre: Electronic
+
+ID: d1995545-c121-4bdf-bc71-80ef7c97e2ad
+Title: Unpretty
+Artist: TLC
+Album: FanMail
+Genre: R&B
+
+ID: 905cefc6-5ddc-4eb1-830e-5e9cfb0c6ae1
+Title: Vampire
+Artist: Olivia Rodrigo
+Album: Guts
+Genre: Pop Rock
+
+ID: fa054c27-f69b-4408-b0e3-8cf26542ad1d
+Title: Vanishing
+Artist: Mariah Carey
+Album: Mariah Carey
+Genre: Pop
+
+ID: 06cffd5f-ff34-44ec-9953-0534d18135d9
+Title: Vision of Love
+Artist: Mariah Carey
+Album: Mariah Carey
+Genre: Pop
+
+ID: 21c7be12-a4cb-4918-97f6-36420368aa08
+Title: Waltz #2 (XO)
+Artist: Elliott Smith
+Album: XO
+Genre: Indie Rock
+
+ID: f97a178c-620e-44f0-a1ec-19f2fc58e99b
+Title: Wuthering Heights
+Artist: Kate Bush
+Album: The Kick Inside
+Genre: Art Rock
+
+ID: f62bd926-36f4-402a-b1e9-bb501c4cc629
+Title: You Know I'm No Good
+Artist: Amy Winehouse
+Album: Back to Black
+Genre: Soul
+
+ID: 12861bd6-693b-40b3-8264-c6b52c0b8eed
+Title: You Learn
+Artist: Alanis Morissette
+Album: Jagged Little Pill
+Genre: Alternative Rock
+
+ID: 1592af5f-d202-453d-84f9-007a8d70ad4c
 Title: You Oughta Know
 Artist: Alanis Morissette
 Album: Jagged Little Pill
+Genre: Alternative Rock
+
+ID: fba3c572-34cd-41c1-a9a7-31c8016bd09c
+Title: You're My Best Friend
+Artist: Queen
+Album: A Night at the Opera
 Genre: Rock
 

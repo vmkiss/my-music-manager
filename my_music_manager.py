@@ -2,34 +2,19 @@ import csv
 import os
 import uuid
 import zmq
-
+import song_dict
 
 # Create CSV file if it doesn't exist yet
 HEADERS = ["ID", "Title", "Artist", "Album", "Genre"]
-ID1 = str(uuid.uuid4())
-DATA1 = [ID1, "Death on Two Legs", "Queen", "A Night at the Opera", "Rock"]
-ID2 = str(uuid.uuid4())
-DATA2 = [ID2, "Red Wine Supernova", "Chappell Roan", "Rise and Fall of a Midwest Princess", "Pop"]
-ID3 = str(uuid.uuid4())
-DATA3 = [ID3, "Lover, You Should've Come Over", "Jeff Buckley", "Grace", "Rock"]
-ID4 = str(uuid.uuid4())
-DATA4 = [ID4, "You Oughta Know", "Alanis Morissette", "Jagged Little Pill", "Rock"]
-ID5 = str(uuid.uuid4())
-DATA5 = [ID5, "This Customer ('s Coming Again)", "Alisdair Lee", "Old Dog, New Tricks", "Rock"]
-ID6 = str(uuid.uuid4())
-DATA6 = [ID6, "Pink Pony Club", "Chappell Roan", "Rise and Fall of a Midwest Princess", "Pop"]
 SONGS = "songs.csv"
 
 if not os.path.exists(SONGS):
     with open(SONGS, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(HEADERS)
-        writer.writerow(DATA1)
-        writer.writerow(DATA2)
-        writer.writerow(DATA3)
-        writer.writerow(DATA4)
-        writer.writerow(DATA5)
-        writer.writerow(DATA6)
+        for song in song_dict.song_dict:
+            song.insert(0, str(uuid.uuid4()))
+            writer.writerow(song)
 
 def view_all_songs():
     """Read csv file and return all albums in collection"""
