@@ -261,11 +261,73 @@ def recommend_song_menu():
                     main()
 
 def recommend_artist_menu():
-    pass
+    print(54 * "=")
+    print("<< RECOMMEND SONG (ALL) >>")
+    print("Please select an option from the menu.\n")
+    print("1. Generate random song from selection of all songs in collection.")
+    print("2. Return to Recommend Song Menu")
+    print("3. Return to Main Menu\n")
+
+    user_choice = "0"
+    while user_choice != "1" or user_choice != "2" or user_choice != "3":
+        user_choice = input("Please choose an option (1 - 3): ")
+        if user_choice == "1":
+            song_data = load_artists()
+            print("\n")
+            recommend_song(song_data)
+            print("\n")
+
+            print("1. Generate another song")
+            print("2. Return to Recommend Music Menu")
+            print("3. Return to Main Menu")
+
+            user_choice = 0
+            while user_choice != "1" or user_choice != "2" or user_choice != "3":
+                user_choice = input("Please choose an option (1 - 3: ")
+                if user_choice == "1":
+                    print("\n")
+                    recommend_song_menu()
+                if user_choice == "2":
+                    print("\n")
+                    recommend_menu()
+                if user_choice == "3":
+                    print("\n")
+                    main()
 
 
 def recommend_album_menu():
-    pass
+    print(54 * "=")
+    print("<< RECOMMEND SONG (ALL) >>")
+    print("Please select an option from the menu.\n")
+    print("1. Generate random song from selection of all songs in collection.")
+    print("2. Return to Recommend Song Menu")
+    print("3. Return to Main Menu\n")
+
+    user_choice = "0"
+    while user_choice != "1" or user_choice != "2" or user_choice != "3":
+        user_choice = input("Please choose an option (1 - 3): ")
+        if user_choice == "1":
+            song_data = load_albums()
+            print("\n")
+            recommend_song(song_data)
+            print("\n")
+
+            print("1. Generate another song")
+            print("2. Return to Recommend Music Menu")
+            print("3. Return to Main Menu")
+
+            user_choice = 0
+            while user_choice != "1" or user_choice != "2" or user_choice != "3":
+                user_choice = input("Please choose an option (1 - 3: ")
+                if user_choice == "1":
+                    print("\n")
+                    recommend_song_menu()
+                if user_choice == "2":
+                    print("\n")
+                    recommend_menu()
+                if user_choice == "3":
+                    print("\n")
+                    main()
 
 
 def recommend_song(data):
