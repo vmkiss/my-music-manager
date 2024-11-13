@@ -262,9 +262,9 @@ def recommend_song_menu():
 
 def recommend_artist_menu():
     print(54 * "=")
-    print("<< RECOMMEND SONG (ALL) >>")
+    print("<< RECOMMEND ARTIST >>")
     print("Please select an option from the menu.\n")
-    print("1. Generate random song from selection of all songs in collection.")
+    print("1. Generate random artist from selection of artists in collection.")
     print("2. Return to Recommend Song Menu")
     print("3. Return to Main Menu\n")
 
@@ -297,9 +297,9 @@ def recommend_artist_menu():
 
 def recommend_album_menu():
     print(54 * "=")
-    print("<< RECOMMEND SONG (ALL) >>")
+    print("<< RECOMMEND ALBUM >>")
     print("Please select an option from the menu.\n")
-    print("1. Generate random song from selection of all songs in collection.")
+    print("1. Generate random album from albums in collection.")
     print("2. Return to Recommend Song Menu")
     print("3. Return to Main Menu\n")
 
@@ -418,9 +418,6 @@ def main():
                 exit()
 
 if __name__ == "__main__":
-    #main()
-    print(load_artists())
-    print(load_songs())
-    print(load_albums())
+    main()
 
 
