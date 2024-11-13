@@ -283,7 +283,7 @@ def recommend_song(data):
 def load_songs():
     with open(SONGS, 'r') as f:
         song_reader = csv.DictReader(f)
-        song_data = []
+        song_data = ["song"]
         for song in song_reader:
             song_data.append(f"{song['ID']}*{song['Title']}*{song['Artist']}*{song['Album']}*{song['Genre']}")
         return "\n".join(song_data)
@@ -291,14 +291,21 @@ def load_songs():
 def load_artists():
     with open(SONGS, 'r') as f:
         song_reader = csv.DictReader(f)
-        artist_data = []
+        artist_data = ["artist"]
         for song in song_reader:
             if song['Artist'] not in artist_data:
                 artist_data.append(f"{song['Artist']}")
-        print("*".join(artist_data))
+        return "\n".join(artist_data)
 
 def load_albums():
-    pass
+    with open(SONGS, 'r') as f:
+        song_reader = csv.DictReader(f)
+        album_data = ["album"]
+        for song in song_reader:
+            if f"{song['Album']}*{song['Artist']}" not in album_data:
+                album_data.append(f"{song['Album']}*{song['Artist']}")
+        return "\n".join(album_data)
+
 
 def features_guide():
     print(54 * "=")
@@ -349,6 +356,9 @@ def main():
                 exit()
 
 if __name__ == "__main__":
-    main()
+    #main()
+    print(load_artists())
+    print(load_songs())
+    print(load_albums())
 
 
