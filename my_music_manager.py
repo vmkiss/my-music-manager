@@ -398,14 +398,20 @@ def search_music_menu():
 
 
 def search_music_title(keyword):
-    data = load_songs()
-    data = str(keyword) + "\n" + data
+    with open(SONGS, 'r') as f:
+        song_reader = csv.DictReader(f)
+        song_data = [str(keyword)]
+        song_data.append("song")
+        for song in song_reader:
+            song_data.append(f"{song['ID']}*{song['Title']}*{song['Artist']}*{song['Album']}*{song['Genre']}")
+        song_data = "\n".join(song_data)
+
     context = zmq.Context()
     socket = context.socket(zmq.REQ)  # Request socket
     socket.connect("tcp://localhost:5555")  # Establish connection
 
     # Send song data to recommendation microservice
-    socket.send_string(data)
+    socket.send_string(song_data)
 
     # Wait for response from microservice
     rec = socket.recv_string()
