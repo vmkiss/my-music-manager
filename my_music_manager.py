@@ -400,8 +400,7 @@ def search_music_menu():
 def search_music(keyword, data_type):
     with open(SONGS, 'r') as f:
         song_reader = csv.DictReader(f)
-        song_data = [str(keyword)]
-        song_data.append(data_type)
+        song_data = [str(keyword), data_type]
         for song in song_reader:
             song_data.append(f"{song['ID']}*{song['Title']}*{song['Artist']}*{song['Album']}*{song['Genre']}")
         song_data = "\n".join(song_data)
