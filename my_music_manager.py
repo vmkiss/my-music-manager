@@ -437,12 +437,13 @@ def review_music_menu():
         if user_input == "1":
             print(54 * "=")
             print("<< Create Review >>")
-            generate_review()
+            create_review()
             print("\n")
         if user_input == "2":
             print(54 * "=")
             print("<< Search for Review >>")
             find_review()
+            print("\n")
 
         if user_input == "3":
             main()
