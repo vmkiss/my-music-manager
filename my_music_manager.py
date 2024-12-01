@@ -484,6 +484,7 @@ def find_review():
     print("<< CREATE REVIEW >>")
 
     keyword = input("Enter title of song whose review you wish to search for: ")
+    print("\n")
 
     print("1. Search for review")
     print("2. Return to Main Menu\n")
