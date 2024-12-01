@@ -435,13 +435,9 @@ def review_music_menu():
         print("\n")
 
         if user_input == "1":
-            print(54 * "=")
-            print("<< Create Review >>")
             create_review()
             print("\n")
         if user_input == "2":
-            print(54 * "=")
-            print("<< Search for Review >>")
             find_review()
             print("\n")
 
@@ -449,7 +445,39 @@ def review_music_menu():
             main()
 
 def create_review():
-    pass
+    print(54 * "=")
+    print("<< CREATE REVIEW >>")
+    print("Please complete the prompts to create your review.\n")
+
+    title = input("Enter title of song: ")
+    artist = input("Enter name of artist: ")
+    rating = input("Rate this song from 1 - 5: ")
+    comment = input("Review details: ")
+
+    print("1. Save review")
+    print("2. Return to Main Menu\n")
+
+    user_input = "0"
+    while user_input != "1" or user_input != "2":
+        user_input = input("Please choose an option (1 - 2): ")
+
+        if user_input == "1":
+            context = zmq.Context()
+            socket = context.socket(zmq.REQ)  # Request socket
+            socket.connect("tcp://localhost:5555")  # Establish connection
+
+            data = "create" + "\n" + title + "\n" + artist + "\n" + rating + "\n" + comment
+            print(data)
+
+            # Send song data to recommendation microservice
+            socket.send_string(data)
+
+            # Wait for response from microservice
+            rec = socket.recv_string()
+
+
+        if user_input == "2":
+            main()
 
 
 def find_review():
