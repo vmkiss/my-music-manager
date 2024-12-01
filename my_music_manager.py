@@ -383,18 +383,42 @@ def search_music_menu():
 
         if user_input == "1":
             print(54 * "=")
-            print("<< Search for Song by Title >> >>")
-            print("Please enter the title of the song you wish to search for.\n")
-            delete_song("ID")
+            print("<< Search for Song by Title >>")
+            keyword = input("Please enter the title of the song you wish to search for: ")
+            print("\n")
+            search_music(keyword, "song")
         if user_input == "2":
             print(54 * "=")
             print("<< Search for Song by Artist >>")
-            print("Please enter the name of the artist whose songs you wish to search for.\n")
-            delete_song("Title")
+            keyword = input("Please enter the name of the artist whose songs you wish to search for: ")
+            print("\n")
+            search_music(keyword, "artist")
         if user_input == "3":
             main()
 
 
+def search_music(keyword, data_type):
+    with open(SONGS, 'r') as f:
+        song_reader = csv.DictReader(f)
+        song_data = [str(keyword), data_type]
+        for song in song_reader:
+            song_data.append(f"{song['ID']}*{song['Title']}*{song['Artist']}*{song['Album']}*{song['Genre']}")
+        song_data = "\n".join(song_data)
+
+    context = zmq.Context()
+    socket = context.socket(zmq.REQ)  # Request socket
+    socket.connect("tcp://localhost:5555")  # Establish connection
+
+    # Send song data to recommendation microservice
+    socket.send_string(song_data)
+
+    # Wait for response from microservice
+    rec = socket.recv_string()
+
+    if data_type == 'song':
+        print(f"SONGS WITH TITLE {keyword}:\n{rec}")
+    if data_type == 'artist':
+        print(f"SONGS BY ARTIST {keyword}:\n{rec}")
 
 
 def features_guide():
