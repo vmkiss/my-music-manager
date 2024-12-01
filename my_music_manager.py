@@ -425,7 +425,7 @@ def review_music_menu():
     print(54 * "=")
     print("<< REVIEW MUSIC >>")
     print("Please select an option from the menu.")
-    print("1. Generate Review")
+    print("1. Create Review")
     print("2. Search for Review")
     print("3. Return to Main Menu\n")
 
@@ -436,7 +436,7 @@ def review_music_menu():
 
         if user_input == "1":
             print(54 * "=")
-            print("<< Generate Review >>")
+            print("<< Create Review >>")
             generate_review()
             print("\n")
         if user_input == "2":
@@ -447,7 +447,7 @@ def review_music_menu():
         if user_input == "3":
             main()
 
-def generate_review():
+def create_review():
     pass
 
 
