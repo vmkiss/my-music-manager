@@ -467,14 +467,13 @@ def create_review():
             socket.connect("tcp://localhost:5555")  # Establish connection
 
             data = "create" + "\n" + title + "\n" + artist + "\n" + rating + "\n" + comment
-            print(data)
 
             # Send song data to recommendation microservice
             socket.send_string(data)
 
             # Wait for response from microservice
             rec = socket.recv_string()
-
+            print(rec)
 
         if user_input == "2":
             main()
