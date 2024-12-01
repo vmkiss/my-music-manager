@@ -383,18 +383,37 @@ def search_music_menu():
 
         if user_input == "1":
             print(54 * "=")
-            print("<< Search for Song by Title >> >>")
-            print("Please enter the title of the song you wish to search for.\n")
-            delete_song("ID")
+            print("<< Search for Song by Title >>")
+            keyword = input("Please enter the title of the song you wish to search for: ")
+            print("\n")
+            search_music_title(keyword)
         if user_input == "2":
             print(54 * "=")
             print("<< Search for Song by Artist >>")
-            print("Please enter the name of the artist whose songs you wish to search for.\n")
-            delete_song("Title")
+            keyword = input("Please enter the name of the artist whose songs you wish to search for: ")
+            print("\n")
+            search_music_artist(keyword)
         if user_input == "3":
             main()
 
 
+def search_music_title(keyword):
+    data = load_songs()
+    data = str(keyword) + "\n" + data
+    context = zmq.Context()
+    socket = context.socket(zmq.REQ)  # Request socket
+    socket.connect("tcp://localhost:5555")  # Establish connection
+
+    # Send song data to recommendation microservice
+    socket.send_string(data)
+
+    # Wait for response from microservice
+    rec = socket.recv_string()
+    print(f"SONGS WITH TITLE {keyword}:\n{rec}")
+
+
+def search_music_artist(keyword):
+    pass
 
 
 def features_guide():
