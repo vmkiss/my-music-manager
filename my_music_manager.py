@@ -480,7 +480,33 @@ def create_review():
 
 
 def find_review():
-    pass
+    print(54 * "=")
+    print("<< CREATE REVIEW >>")
+
+    keyword = input("Enter title of song whose review you wish to search for: ")
+
+    print("1. Search for review")
+    print("2. Return to Main Menu\n")
+
+    user_input = "0"
+    while user_input != "1" or user_input != "2":
+        user_input = input("Please choose an option (1 - 2): ")
+
+        if user_input == "1":
+            context = zmq.Context()
+            socket = context.socket(zmq.REQ)  # Request socket
+            socket.connect("tcp://localhost:5555")  # Establish connection
+
+            # Format and send keyword to search microservice
+            data = "search" + "\n" + keyword
+            socket.send_string(data)
+
+            # Wait for response from microservice
+            rec = socket.recv_string()
+            print(rec)
+
+        if user_input == "2":
+            main()
 
 
 def features_guide():
