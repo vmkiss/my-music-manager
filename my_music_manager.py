@@ -421,6 +421,40 @@ def search_music(keyword, data_type):
         print(f"SONGS BY ARTIST {keyword}:\n{rec}")
 
 
+def review_music_menu():
+    print(54 * "=")
+    print("<< REVIEW MUSIC >>")
+    print("Please select an option from the menu.")
+    print("1. Generate Review")
+    print("2. Search for Review")
+    print("3. Return to Main Menu\n")
+
+    user_input = "0"
+    while user_input != "1" or user_input != "2" or user_input != "3":
+        user_input = input("Please choose an option (1 - 3): ")
+        print("\n")
+
+        if user_input == "1":
+            print(54 * "=")
+            print("<< Generate Review >>")
+            generate_review()
+            print("\n")
+        if user_input == "2":
+            print(54 * "=")
+            print("<< Search for Review >>")
+            find_review()
+
+        if user_input == "3":
+            main()
+
+def generate_review():
+    pass
+
+
+def find_review():
+    pass
+
+
 def features_guide():
     print(54 * "=")
     print("<< FEATURES GUIDE >>")
@@ -450,12 +484,13 @@ def main():
         print("3. Delete Song")
         print("4. Recommend Music")
         print("5. Search Music")
-        print("6. View MyMusicManager Features Guide")
-        print("7. Exit\n")
+        print("6. Review Music")
+        print("7. View MyMusicManager Features Guide")
+        print("8. Exit\n")
 
         user_input = 0
         while user_input != "1" or user_input != "2" or user_input != "3" or user_input != "4" or user_input != "5" or user_input != "6":
-            user_input = input("Please choose an option (1 - 6): ")
+            user_input = input("Please choose an option (1 - 8): ")
             if user_input == "1":
                 view_all_songs()
             if user_input == "2":
@@ -467,8 +502,10 @@ def main():
             if user_input == "5":
                 search_music_menu()
             if user_input == "6":
-                features_guide()
+                review_music_menu()
             if user_input == "7":
+                features_guide()
+            if user_input == "8":
                 print("Thank you for using MyMusicManager. Goodbye!")
                 exit()
 
